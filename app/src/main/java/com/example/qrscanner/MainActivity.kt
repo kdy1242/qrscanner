@@ -29,6 +29,13 @@ class MainActivity : AppCompatActivity() {
         integrator.initiateScan()
     }
 
+    fun startBarcodeReaderCustomActivity(view: View) {
+        val integrator = IntentIntegrator(this)
+        integrator.setBarcodeImageEnabled(true) // onActivityResult 에 바코드에 대한 결과값뿐만아니라 인식한 사진도 비트맵형태로 함께 전달
+        integrator.captureActivity = MyBarcodeReaderActivity::class.java
+        integrator.initiateScan()
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {

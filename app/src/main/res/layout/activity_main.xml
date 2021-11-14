@@ -18,6 +18,12 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="QR코드리더 커스텀 액티비티"
+        android:onClick="startBarcodeReaderCustomActivity"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="QR코드리더 커스텀"
         android:onClick="startBarcodeReaderCustom"/>
 
